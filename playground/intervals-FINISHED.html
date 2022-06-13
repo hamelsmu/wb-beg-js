@@ -18,7 +18,6 @@
     // setTimeout(buzzer, 500);
     // console.log('finishing');
 
-
     function setImmediateInterval(funcToRun, ms) {
       // right away call that function
       funcToRun();
@@ -38,18 +37,18 @@
 
     const bombTimer = setTimeout(destroy, 5000);
 
-    window.addEventListener('click', function () {
+    window.addEventListener('click', () => {
       console.log('You clicked! You saved the world');
       // ???? How do i stop
       clearTimeout(bombTimer); // STOP THE TIMER FROM RUNNING
     });
 
-    const poopInterval = setInterval(function () {
+    const poopInterval = setInterval(() => {
       console.log('💩');
       console.log('Hehehe');
     }, 100);
 
-    setTimeout(function () {
+    setTimeout(() => {
       clearInterval(poopInterval);
     }, 3000);
   </script>

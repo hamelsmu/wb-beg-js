@@ -12,14 +12,26 @@
 
 <body>
   <script>
-    const toppings = ['Mushrooms ', 'Tomatoes', 'Eggs', 'Chili', 'Lettuce', 'Avocado', 'Chiles', 'Bacon', 'Pickles', 'Onions', 'Cheese'];
+    const toppings = [
+  'Mushrooms ',
+  'Tomatoes',
+  'Eggs',
+  'Chili',
+  'Lettuce',
+  'Avocado',
+  'Chiles',
+  'Bacon',
+  'Pickles',
+  'Onions',
+  'Cheese',
+];
 
     const buns = ['egg', 'wonder', 'brioche'];
 
     const meats = {
       beyond: 10,
       beef: 5,
-      pork: 7
+      pork: 7,
     };
 
     const prices = {
@@ -38,7 +50,6 @@
       { comment: 'Ambiance needs work', rating: 3 },
       { comment: 'I DONT LIKE BURGERS', rating: 1 },
     ];
-
 
     /*
       Static Methods
@@ -66,7 +77,6 @@
     // add it back in with unshift()
     // Do the last four,but immutable (with spreads and new variables)
 
-
     // Make a copy of the toppings array with slice()
     // Make a copy of the toppings array with a spread
     // take out items 3 to 5 of your new toppings array with splice()
@@ -85,15 +95,18 @@
     // Remove the one star rating however you like!
 
     // check if there is at least 5 of one type of meat with some()
+    Object.values(meats).some((x) => x > 5);
     // make sure we have at least 3 of every meat with every()
+    Object.values(meats).every((x) => x >= 3);
     // sort the toppings alphabetically with sort()
+    toppings.sort();
     // sort the order totals from most expensive to least with .sort()
+    orderTotals.sort((a, b) => b - a);
     // Sort the prices with sort()
-
+    Object.values(prices).sort((a, b) => b - a);
     /*
       Looping Methods (next)
     */
-
   </script>
 </body>
 
